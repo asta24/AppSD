@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        et_nombre = (EditText) findViewById()R.id.et_nombre);
-        et_contenido = (EditText) findViewById()R.id.et_contenido);
+        et_nombre = (EditText) findViewById(R.id.et_nombre);
+        et_contenido = (EditText) findViewById(R.id.et_contenido);
     }
     //metodo boton guardar
     public void Guardar (View view) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         String nombre = et_nombre.getText().toString();
         try{
             File tarjetaSD = Environment.getExternalStorageDirectory();
-            File tarjetaSD = new File(tarjetaSD.getPath(), nombre);
+            File rutaArchivo = new File(tarjetaSD.getPath(), nombre);
             InputStreamReader abrirArchivo = new InputStreamReader(openFileInput(nombre));
 
             BufferedReader leerArchivo = new BufferedReader(abrirArchivo);
